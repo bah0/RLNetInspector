@@ -1,0 +1,61 @@
+﻿<Page x:Class="RLNetInspector.DetailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RLNetInspector"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DetailsPage">
+
+    
+
+    <Grid Grid.Row="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Border  Grid.Row="0" Background="LightGray" BorderBrush="DarkGray" BorderThickness="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="HeaderTitle" VerticalAlignment="Center" FontWeight="Bold" Margin="5 0 0 0" FontSize="13">Details Title:</TextBlock>
+                <TextBlock x:Name="HeaderContent" VerticalAlignment="Center" FontWeight="Bold" Margin="5 0 0 0" FontSize="13">Content</TextBlock>
+            </StackPanel>
+        </Border>
+
+        <TabControl Grid.Row="1" Margin="0" Padding="0">
+            <TabItem Header="Summary">
+                <!-- 
+                                <ScrollViewer>
+                                    <Grid>
+
+                                    </Grid>
+                                </ScrollViewer>
+                            -->
+                <RichTextBox x:Name="SummaryRichTextBox" Margin="10" IsReadOnly="True" VerticalScrollBarVisibility="Visible" FontFamily="Consolas" >
+                </RichTextBox>
+
+            </TabItem>
+            <TabItem Header="Header" IsEnabled="False">
+                <ScrollViewer>
+
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Content" IsEnabled="False">
+                <ScrollViewer>
+
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="View JSON" IsEnabled="False">
+                <ScrollViewer>
+
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="View Tree" IsEnabled="False">
+                <ScrollViewer>
+
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>
